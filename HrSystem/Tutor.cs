@@ -10,15 +10,20 @@ namespace HrSystem
             : base(firstName, lastName, agency)
         {
         }
-        public void Teach()
-        {
-            Console.WriteLine("Teach(): Sit down and listen, lesson starting");
-        }
+        //public void Teach()v vvv
+        //{
+        //    Console.WriteLine("Teach(): Sit down and listen, lesson starting");
+        //}
 
         public override void Display()
         {
             Console.WriteLine("Tutor:");
             base.Display();
+        }
+
+        public void Teach()
+        {
+            throw new NotImplementedException();
         }
     }
 }
