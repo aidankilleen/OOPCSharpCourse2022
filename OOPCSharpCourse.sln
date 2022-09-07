@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticInvestigation", "Stat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListInvestigation", "ListInvestigation\ListInvestigation.csproj", "{E278AFEF-36FF-40D0-AC2E-783CD58E6E5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonBaseClassInvestigation", "CommonBaseClassInvestigation\CommonBaseClassInvestigation.csproj", "{531BB16B-9CBB-4D11-818D-2063DF8F9E4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{E278AFEF-36FF-40D0-AC2E-783CD58E6E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E278AFEF-36FF-40D0-AC2E-783CD58E6E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E278AFEF-36FF-40D0-AC2E-783CD58E6E5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{531BB16B-9CBB-4D11-818D-2063DF8F9E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{531BB16B-9CBB-4D11-818D-2063DF8F9E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{531BB16B-9CBB-4D11-818D-2063DF8F9E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{531BB16B-9CBB-4D11-818D-2063DF8F9E4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
