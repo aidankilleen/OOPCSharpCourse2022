@@ -21,6 +21,11 @@ namespace StaticInvestigation
 
             Message.DisplayCount();
 
+            for (int i=0; i<1000; i++)
+            {
+                Message m = new Message($"m {i}", $"m {i}");
+                Message.DisplayCount();
+            }
         }
     }
 }
