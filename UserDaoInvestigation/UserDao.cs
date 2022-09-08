@@ -90,7 +90,6 @@ namespace UserDaoInvestigation
             cmd.Parameters.Add(new SqliteParameter("@email", userToAdd.Email));
             cmd.Parameters.Add(new SqliteParameter("@active", userToAdd.Active ? 1 : 0));
 
-
             Console.WriteLine(sql);
 
             cmd.ExecuteNonQuery();

@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseHelloWorld", "Datab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDaoInvestigation", "UserDaoInvestigation\UserDaoInvestigation.csproj", "{A9409A6F-71D7-417F-8957-505B960C4641}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionInvestigation", "ExceptionInvestigation\ExceptionInvestigation.csproj", "{ABB8B600-5224-4A7D-9C3A-B0B0E234C34E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{A9409A6F-71D7-417F-8957-505B960C4641}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9409A6F-71D7-417F-8957-505B960C4641}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9409A6F-71D7-417F-8957-505B960C4641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB8B600-5224-4A7D-9C3A-B0B0E234C34E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB8B600-5224-4A7D-9C3A-B0B0E234C34E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB8B600-5224-4A7D-9C3A-B0B0E234C34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB8B600-5224-4A7D-9C3A-B0B0E234C34E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
