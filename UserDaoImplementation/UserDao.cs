@@ -3,16 +3,25 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace UserDaoInvestigation
+namespace UserDaoImplementation
 {
-
-    class UserDao
+    /// <summary>
+    /// UserDao Class - used to read and write user objects
+    /// </summary>
+    public class UserDao
     {
-        private string connectionString = @"Data Source=C:\data\oocsharp2022\users.db";
+        private string defaultPath = @"C:\data\oocsharp2022\users.db";
+        private string connectionString;
         private SqliteConnection conn;
 
-        public UserDao()
+        /// <summary>
+        /// Create UserDao instance and open database
+        /// NB: Please call .Close() to close the database
+        /// </summary>
+        /// <param name="path">Optional - specify database path</param>
+        public UserDao(string path = "")
         {
+            connectionString = $@"Data Source={ (path.Equals("") ? defaultPath : path) }";
             conn = new SqliteConnection(connectionString);
             conn.Open();
         }

@@ -25,7 +25,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDaoInvestigation", "Use
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionInvestigation", "ExceptionInvestigation\ExceptionInvestigation.csproj", "{ABB8B600-5224-4A7D-9C3A-B0B0E234C34E}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UserDaoImplementation", "UserDaoImplementation\UserDaoImplementation.shproj", "{81C0C933-FD02-450A-8359-9C9AAAC005F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDaoConsoleApp", "UserDaoConsoleApp\UserDaoConsoleApp.csproj", "{D7D62AA9-3BC5-4530-B02B-FF98ACEC7A0D}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		UserDaoImplementation\UserDaoImplementation.projitems*{81c0c933-fd02-450a-8359-9c9aaac005f9}*SharedItemsImports = 13
+		UserDaoImplementation\UserDaoImplementation.projitems*{d7d62aa9-3bc5-4530-b02b-ff98acec7a0d}*SharedItemsImports = 5
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -75,6 +83,10 @@ Global
 		{ABB8B600-5224-4A7D-9C3A-B0B0E234C34E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABB8B600-5224-4A7D-9C3A-B0B0E234C34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABB8B600-5224-4A7D-9C3A-B0B0E234C34E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D62AA9-3BC5-4530-B02B-FF98ACEC7A0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D62AA9-3BC5-4530-B02B-FF98ACEC7A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D62AA9-3BC5-4530-B02B-FF98ACEC7A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D62AA9-3BC5-4530-B02B-FF98ACEC7A0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

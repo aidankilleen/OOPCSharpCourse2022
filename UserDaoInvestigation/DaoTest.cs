@@ -12,6 +12,21 @@ namespace UserDaoInvestigation
 
             UserDao dao = new UserDao();
 
+
+            try
+            {
+                User user = dao.GetUser(9999);
+                Console.WriteLine(user);
+
+            } catch(UserDaoException ex)
+            {
+                Console.WriteLine("User not found");
+            }
+
+
+
+
+
             User u = new User
             {
                 Name = "','',0); delete from users where id = 1;--",
