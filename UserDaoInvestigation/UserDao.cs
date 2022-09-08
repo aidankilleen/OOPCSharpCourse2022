@@ -80,15 +80,46 @@ namespace UserDaoInvestigation
 
         public User AddUser(User userToAdd)
         {
-            String sql = $@"INSERT INTO users 
-                            (name, email, active) 
-                        VALUES(
-                            '{ userToAdd.Name }',
-                            '{ userToAdd.Email }',
-                            {( userToAdd.Active ? 1 : 0 )}
-                        )";
+            String sql = $"INSERT INTO users (name, email, active) " +
+                            $"VALUES(@name,@email,@active)";
 
             SqliteCommand cmd = new SqliteCommand(sql, conn);
+
+            // tell db engine to substitute the values into the tokens
+            cmd.Parameters.Add(new SqliteParameter("@name", userToAdd.Name));
+            cmd.Parameters.Add(new SqliteParameter("@email", userToAdd.Email));
+            cmd.Parameters.Add(new SqliteParameter("@active", userToAdd.Active ? 1 : 0));
+
+
+            Console.WriteLine(sql);
+
+            cmd.ExecuteNonQuery();
+
+            // get the id
+            sql = "select last_insert_rowid()";
+
+            cmd = new SqliteCommand(sql, conn);
+            SqliteDataReader rdr = cmd.ExecuteReader();
+
+            if (rdr.Read())
+            {
+                int id = rdr.GetInt32(0);
+                userToAdd.Id = id;
+            }
+            rdr.Close();
+            return userToAdd;
+
+        }
+        public User AddUserInsecure(User userToAdd)
+        {
+            String sql = $"INSERT INTO users (name, email, active) " +
+                            $"VALUES('{ userToAdd.Name }'," +
+                            $"'{ userToAdd.Email }',{( userToAdd.Active ? 1 : 0 )})";
+
+            SqliteCommand cmd = new SqliteCommand(sql, conn);
+
+            Console.WriteLine(sql);
+
             cmd.ExecuteNonQuery();
 
             // get the id
