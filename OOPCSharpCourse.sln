@@ -29,9 +29,12 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UserDaoImplementation", "Us
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDaoConsoleApp", "UserDaoConsoleApp\UserDaoConsoleApp.csproj", "{D7D62AA9-3BC5-4530-B02B-FF98ACEC7A0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDaoWindowsFormsApp", "UserDaoWindowsFormsApp\UserDaoWindowsFormsApp.csproj", "{97519608-F411-43CA-A1AA-F67E30ADDDF2}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		UserDaoImplementation\UserDaoImplementation.projitems*{81c0c933-fd02-450a-8359-9c9aaac005f9}*SharedItemsImports = 13
+		UserDaoImplementation\UserDaoImplementation.projitems*{97519608-f411-43ca-a1aa-f67e30adddf2}*SharedItemsImports = 5
 		UserDaoImplementation\UserDaoImplementation.projitems*{d7d62aa9-3bc5-4530-b02b-ff98acec7a0d}*SharedItemsImports = 5
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +90,10 @@ Global
 		{D7D62AA9-3BC5-4530-B02B-FF98ACEC7A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7D62AA9-3BC5-4530-B02B-FF98ACEC7A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7D62AA9-3BC5-4530-B02B-FF98ACEC7A0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97519608-F411-43CA-A1AA-F67E30ADDDF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97519608-F411-43CA-A1AA-F67E30ADDDF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97519608-F411-43CA-A1AA-F67E30ADDDF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97519608-F411-43CA-A1AA-F67E30ADDDF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
