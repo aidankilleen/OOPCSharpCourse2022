@@ -80,12 +80,44 @@ namespace UserDaoInvestigation
 
         public User AddUser(User userToAdd)
         {
-            throw new NotImplementedException();
+            String sql = $@"INSERT INTO users 
+                            (name, email, active) 
+                        VALUES(
+                            '{ userToAdd.Name }',
+                            '{ userToAdd.Email }',
+                            {( userToAdd.Active ? 1 : 0 )}
+                        )";
+
+            SqliteCommand cmd = new SqliteCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+
+            // get the id
+            sql = "select last_insert_rowid()";
+
+            cmd = new SqliteCommand(sql, conn);
+            SqliteDataReader rdr = cmd.ExecuteReader();
+
+            if(rdr.Read())
+            {
+                int id = rdr.GetInt32(0);
+                userToAdd.Id = id;
+            }
+            rdr.Close();
+            return userToAdd;
         }
 
         public User UpdateUser(User userToUpdate)
         {
-            throw new NotImplementedException();
+            String sql = $@"UPDATE users
+                            SET name = '{ userToUpdate.Name }', 
+                            email = '{ userToUpdate.Email }', 
+                            active = { (userToUpdate.Active ? 1 : 0) }
+                            WHERE id = { userToUpdate.Id }";
+
+            SqliteCommand cmd = new SqliteCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+
+            return userToUpdate;
         }
     }
 }
