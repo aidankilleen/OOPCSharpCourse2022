@@ -3,17 +3,12 @@
 @model WebApplicationHelloWorld.Pages.UsersModel
 @{
 }
-
 <h1>User List</h1>
 
 @{
-
     UserDao dao = new UserDao();
-
     List<User> users = dao.GetUsers();
-
     dao.Close();
-
 }
 
 <table class="table">
@@ -23,6 +18,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Active</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -33,6 +29,7 @@
                 <td>@user.Name</td>
                 <td>@user.Email</td>
                 <td>@(user.Active ? "Active" : "Inactive")</td>
+                <td><a href="/EditUser?id=@user.Id">Edit</a></td>
             </tr>
         }
     </tbody>

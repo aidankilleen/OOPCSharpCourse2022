@@ -1,0 +1,31 @@
+﻿@page
+@using UserDaoImplementation
+@model WebApplicationHelloWorld.Pages.EditUserSaveModel
+@{
+}
+
+@{ 
+    int id = int.Parse(Request.Query["id"]);
+    string name = Request.Query["name"];
+    string email = Request.Query["email"];
+    bool active = Request.Query.ContainsKey("active");
+
+
+    UserDao dao = new UserDao();
+
+    User userToUpdate = new User
+    {
+        Id=id,
+        Name = name,
+        Email = email,
+        Active = active
+    };
+
+    dao.UpdateUser(userToUpdate);
+
+    dao.Close();
+}
+
+
+<h1>Changes Saved</h1>
+

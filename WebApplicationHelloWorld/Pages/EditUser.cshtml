@@ -1,0 +1,33 @@
+﻿@page
+@using UserDaoImplementation
+@model WebApplicationHelloWorld.Pages.EditUserModel
+@{
+}
+<h1>Edit User</h1>
+@{
+
+    int id = int.Parse(Request.Query["id"]);
+
+    UserDao dao = new UserDao();
+    User user = dao.GetUser(id);
+    dao.Close();
+}
+
+
+<form action="/EditUserSave">
+
+    <input type="hidden" name="id" value="@user.Id" /><br />
+    <input type="text" name="name" value="@user.Name" /><br />
+    <input type="text" name="email" value="@user.Email" /><br />
+    <input type="checkbox" name="active" checked="@user.Active" /><br/>
+
+    <input type="submit" value="Save"/>
+
+</form>
+
+
+
+
+
+
+
