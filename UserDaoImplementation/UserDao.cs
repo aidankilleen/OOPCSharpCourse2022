@@ -88,7 +88,11 @@ namespace UserDaoImplementation
         {
             String sql = $"DELETE FROM users WHERE id = { id }";
             SqliteCommand cmd = new SqliteCommand(sql, conn);
-            cmd.ExecuteNonQuery();
+            int n = cmd.ExecuteNonQuery();
+            if (n != 1)
+            {
+                throw new UserDaoException($"user {id} not deleted");
+            }
         }
 
         public User AddUser(User userToAdd)
