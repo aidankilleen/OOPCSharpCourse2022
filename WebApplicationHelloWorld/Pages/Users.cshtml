@@ -1,0 +1,40 @@
+﻿@page
+@using UserDaoImplementation
+@model WebApplicationHelloWorld.Pages.UsersModel
+@{
+}
+
+<h1>User List</h1>
+
+@{
+
+    UserDao dao = new UserDao();
+
+    List<User> users = dao.GetUsers();
+
+    dao.Close();
+
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Active</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (User user in users)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Name</td>
+                <td>@user.Email</td>
+                <td>@(user.Active ? "Active" : "Inactive")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
