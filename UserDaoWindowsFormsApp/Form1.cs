@@ -43,5 +43,56 @@ namespace UserDaoWindowsFormsApp
             txtEmail.Text = selectedUser.Email;
             chkActive.Checked = selectedUser.Active;
         }
+
+        public void ConfigureControls(bool editing)
+        {
+            if (editing)
+            {
+                txtName.ReadOnly = false;
+                txtEmail.ReadOnly = false;
+                chkActive.Enabled = true;
+
+                btnSave.Enabled = true;
+                btnCancel.Enabled = true;
+                btnEdit.Enabled = false;
+            } else
+            {
+                txtName.ReadOnly = true;
+                txtEmail.ReadOnly = true;
+                chkActive.Enabled = false;
+
+                btnSave.Enabled = false;
+                btnCancel.Enabled = false;
+                btnEdit.Enabled = true;
+            }
+        }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            ConfigureControls(true);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            User activeUser = (User)lstUsers.SelectedItem;
+
+            activeUser.Name = txtName.Text;
+            activeUser.Email = txtEmail.Text;
+            activeUser.Active = chkActive.Checked;
+
+            dao.UpdateUser(activeUser);
+
+            ConfigureControls(false);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            User activeUser = (User)lstUsers.SelectedItem;
+
+            txtName.Text = activeUser.Name;
+            txtEmail.Text = activeUser.Email;
+            chkActive.Checked = activeUser.Active;
+
+            ConfigureControls(false);
+        }
     }
 }

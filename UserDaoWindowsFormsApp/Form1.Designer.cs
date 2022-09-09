@@ -35,6 +35,9 @@ namespace UserDaoWindowsFormsApp
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.chkActive = new System.Windows.Forms.CheckBox();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTest
@@ -61,6 +64,7 @@ namespace UserDaoWindowsFormsApp
             // 
             this.txtName.Location = new System.Drawing.Point(326, 73);
             this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(174, 23);
             this.txtName.TabIndex = 3;
             // 
@@ -68,12 +72,14 @@ namespace UserDaoWindowsFormsApp
             // 
             this.txtEmail.Location = new System.Drawing.Point(326, 116);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(174, 23);
             this.txtEmail.TabIndex = 4;
             // 
             // chkActive
             // 
             this.chkActive.AutoSize = true;
+            this.chkActive.Enabled = false;
             this.chkActive.Location = new System.Drawing.Point(326, 159);
             this.chkActive.Name = "chkActive";
             this.chkActive.Size = new System.Drawing.Size(59, 19);
@@ -85,14 +91,50 @@ namespace UserDaoWindowsFormsApp
             // 
             this.txtId.Location = new System.Drawing.Point(326, 30);
             this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(174, 23);
             this.txtId.TabIndex = 6;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(326, 240);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 7;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Enabled = false;
+            this.btnSave.Location = new System.Drawing.Point(433, 239);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Enabled = false;
+            this.btnCancel.Location = new System.Drawing.Point(433, 280);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.chkActive);
             this.Controls.Add(this.txtEmail);
@@ -114,6 +156,9 @@ namespace UserDaoWindowsFormsApp
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.CheckBox chkActive;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
 
